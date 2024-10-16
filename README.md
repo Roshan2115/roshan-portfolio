@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # My Portfolio
 
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
@@ -65,3 +66,6 @@ Contributions are welcome! If you'd like to contribute to My Portfolio, please f
 ## License
 
 This project is licensed und
+=======
+# roshan-portfolio
+>>>>>>> 4885d624648fdd4d242dad8efcec9059e9cb10fe
