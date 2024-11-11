@@ -1,47 +1,33 @@
-const theme = {
-  // Temp fonts
-  fonts: {
-    title: "Space Grotesk, sans-serif",
-    main: "Space Grotesk, sans-serif",
-    weight: {
-      regular: 400,
-      bold: 700,
-    },
-  },
-  // Colors for layout
-  colors: {
-    primary1: "#854CE6",
-    background1: "#222A35",
-    button: "#854CE6",
-    background2: "#19212C",
-    text: "#C8CFD8",
-    text1: "#F2F5F7",
-    text2: "#626970",
-    text3: "#575C66",
-    footerBackground: "#00012B",
-    accent: "#FF6B6B",
-    hoverButton: "#6C5CE7",
-  },
-  // Spacing scale
-  spacing: {
-    small: "8px",
-    medium: "16px",
-    large: "24px",
-    xLarge: "32px",
-  },
-  // Shadows
-  shadows: {
-    small: "0 1px 2px rgba(0, 0, 0, 0.1)",
-    medium: "0 2px 4px rgba(0, 0, 0, 0.2)",
-    large: "0 4px 8px rgba(0, 0, 0, 0.3)",
-  },
-  // Breakpoints for responsive design
-  breakpoints: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-  },
-};
+export const darkTheme = {
+  bg: "#1C1C27",
+  bgLight: "#1C1E27",
+  primary: "#854CE6",
+  text_primary: "#F2F3F4",
+  text_secondary: "#b1b2b3",
+  card: "#171721",
+  card_light: '#191924',
+  button: "#854CE6",
+  buttonHover: "#A55BEB",
+  white: "#FFFFFF",
+  black: "#000000",
+  shadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
+  accent: "#FF6B6B",
+  transition: "all 0.3s ease",
+  gradient: "linear-gradient(135deg, #6F00B7 0%, #854CE6 100%)",
+}
 
-export default theme;
+export const lightTheme = {
+  bg: "#FFFFFF",
+  bgLight: "#f0f0f0",
+  primary: "#be1adb",
+  text_primary: "#111111",
+  text_secondary: "#48494a",
+  card: "#FFFFFF",
+  cardHover: "#e0e0e0",
+  button: "#5c5b5b",
+  buttonHover: "#7a7a7a",
+  shadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+  accent: "#FF3D00",
+  transition: "all 0.3s ease",
+  gradient: "linear-gradient(135deg, #FFB300 0%, #FF6F00 100%)",
+}

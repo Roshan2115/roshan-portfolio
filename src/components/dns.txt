@@ -1,0 +1,37 @@
+Explanation of the Code:
+UDP Socket: A UDP socket is created and bound to 127.0.0.1:2053.
+
+Receiving Data: The server listens for incoming messages in an infinite loop.
+
+Building the Response:
+
+The build_dns_response function constructs the DNS response packet.
+The DNS header is created using the struct.pack method, which allows you to pack the values into a binary format.
+The header contains:
+ID: Set to 1234.
+Flags: Combined using bitwise operations to set the relevant fields.
+Counts: All counts (qdcount, ancount, nscount, arcount) are set to 0.
+Sending the Response: The constructed header is sent back to the source of the request.
+
+Important Notes:
+Big-endian Format: The ! in struct.pack specifies network (big-endian) byte order.
+Further Extensions: In later stages, you may need to fill in the Question, Answer, Authority, and Additional sections of the DNS message.
+
+
+
+
+Explanation of Changes:
+Header Section:
+
+Updated qdcount to 1 since we will be sending a question section.
+Question Section:
+
+The build_question_section function constructs the question section.
+The domain name codecrafters.io is encoded as per the DNS specification:
+\x0c indicates the length of the first label (codecrafters), followed by the label itself, followed by \x02 for the length of the second label (io), and finally a null byte \x00 to terminate the name.
+The qtype and qclass are packed using struct.pack to create the binary representation for the type (A record) and class (IN).
+Combining Sections:
+
+The response is created by combining the header and the question section before sending it back to the client.
+Testing the Server:  "" roshan-mishra.netlify.app": "52.220.155.145""
+You can test this updated DNS server by sending a DNS query to it. It should respond with a DNS packet that includes the header and the question section formatted correctly.
